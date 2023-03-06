@@ -152,6 +152,8 @@ class MovieListCreateViewTest(APITestCase):
             "\nVerifique se as informações do filme retornadas no POST "
             + f"em `{self.BASE_URL}` com dados válidos estão corretas."
         )
+        print("resultado esperado", expected_data)
+        print("resultado retornado", resulted_data)
         self.assertDictEqual(expected_data, resulted_data, msg)
 
         msg = "\nVerifique se o gênero é pego do banco se já existir"
